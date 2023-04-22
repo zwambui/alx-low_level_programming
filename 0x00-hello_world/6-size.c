@@ -1,15 +1,24 @@
-#include<stdio.h>
+#include <stdio.h>
 /**
- * main - Entry point
+ * main -entrypoint
  *
- * Return: Always 0 (Success)
+ * Return: always 0
+ *
  */
+
 int main(void)
 {
-	printf("Size of a char: %d byte(s)\n", sizeof(char));
-	printf("Size of of int: %d byte(s)\n", sizeof(int));
-	printf("Size of a long int: %d byte(s)\n", sizeof(long int));
-	printf("Size of a long long int: %d byte(s)\n", sizeof(long long int));
-	printf("Size of a float: %d byte(s)\n", sizeof(float));
+	char zcharacter;
+	int zinteger;
+	long zlong;
+	float zfloat;
+	long long zlonglong;
+
+	printf("Size of a char: %d byte(s)\n", sizeof(zcharacter));
+	printf("Size of an int: %d byte(s)\n", sizeof(zinteger));
+	printf("Size of a long int: %d byte(s)\n", sizeof(zlong));
+	printf("Size of a long long int: %d byte(s)\n", sizeof(zlonglong));
+	printf("Size of a float: %d byte(s)\n", sizeof(zfloat));
+
 	return (0);
 }
