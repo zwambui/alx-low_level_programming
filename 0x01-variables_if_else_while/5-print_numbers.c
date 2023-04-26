@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-	int Number;	
-	
+	int Number;
+
 	for (Number = 0; Number < 10; Number++)
 
 	printf("%d", Number);
