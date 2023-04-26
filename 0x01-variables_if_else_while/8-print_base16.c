@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char ch;
+	char ch = 'a';
 	int Number;
 
 	for (Number = 0; Number < 16; Number++)
@@ -24,13 +24,5 @@ int main(void)
 	putchar('\n');
 	return (0);
 	}
-
-
-
-
-
-
-
-
 
 }
