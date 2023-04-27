@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * _isdigit - print digit 0 through 9
- * @c: char to check
+ * _isdigit - check for a digit
+ * @c: parameter to check
  *
- * Return: 1 or 0
+ * Return: 1 for digit else 0
  */
 
-int _isdigit(int c);
+int _isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 	{
@@ -17,4 +17,5 @@ int _isdigit(int c);
 	{
 		return (0);
 	}
+
 }
