@@ -1,13 +1,13 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * print_line - prints draws a straight line in the terminal
- * @n: number of times the character _ should be printed
- * Return: void
+ * print_line - prints a straight line
+ * @n: times _ is printed
+ *
+ * Return: Always (0)
  */
 
-void print_line(int n);
+void print_line(int n)
 {
 	int i;
 
@@ -16,5 +16,4 @@ void print_line(int n);
 		_putchar(95);
 	}
 	_putchar('\n');
-
 }
