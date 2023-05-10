@@ -1,12 +1,10 @@
 #include "main.h"
 
 /**
- * main - function that prints a string
- *
- * @s:  string to be printed
+ * _puts_recursion - prints a string with recursion
+ * @s: string to be printed
  */
-
-void _puts_recursion(char *s);
+void _puts_recursion(char *s)
 {
 	if (*s == '\0')
 	{
