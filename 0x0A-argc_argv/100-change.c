@@ -2,58 +2,62 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 /**
- * checker - checks for valid input
- * @argc: integer
- * @i: counter for argv[]
- * @j: counter for argv[][]
- * @argv: string
- * Return: 0 on success, 1 on failure
+ * min_coins - change for an amount of money
+ * argc: integer
+ * arcv: string
+ * @input: minimum coins in change
+ * Return: 0
  */
-int checker(int argc, int i, unsigned int j, char *argv[])
+
+int min_coins(int input)
 {
-	for (i = 1; i <= argc; i++)
-		for (j = 0; argv[i] != '\0' && j < strlen(argv[i]); j++)
-			if (isdigit(argv[i][j]) == 0)
-				return (1);
-	return (0);
+	int i = 0, counter = 0;
+	int cents [] = {25, 10, 5, 2, 1};
+
+	if (input < 0)
+	{
+	printf("0\n");
+	return (1);
+	}
+	while (true)
+	{
+	if (input >= cents[i])
+	{
+	input = input - cents[i];
+	counter++;
+	}
+	else if (input == 0)
+	{
+	return (counter);
+	}
+	else
+	i++;
 }
+	return (counter);
+}
+
+
 /**
- * main - Prints the minimum number of coins
- * to make change for an amount of cents.
+ * main - change for an amount of money
  * @argc: integer
  * @argv: string
- * Return: 0 on success
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	unsigned int cents;
-	int coins;
+	int input, output;
 
-	cents = coins = 0;
-	if (argc == 2)
+	if (argc != 2)
 	{
-		if (argv[1][0] == '-')
-			printf("0\n");
-		if (checker(argc, 1, 0, argv) == 0)
-		{
-			cents = atoi(argv[1]);
-			for ( ; cents >= 25; coins++, cents -= 25)
-				;
-			for ( ; cents >= 10; coins++, cents -= 10)
-				;
-			for ( ; cents >= 5; coins++, cents -= 5)
-				;
-			for ( ; cents >= 2; coins++, cents -= 2)
-				;
-			for ( ; cents >= 1; coins++, cents--)
-				;
-			printf("%d\n", coins);
-		}
+	printf("Error\n");
+	return (1);
 	}
-	else
-		printf("Error\n");
+	input = atoi(argv[1]);
+	output = min_coins(input);
+	printf("%d\n", output);
 	return (0);
 }
