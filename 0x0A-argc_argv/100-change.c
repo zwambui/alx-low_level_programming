@@ -22,7 +22,7 @@ int min_coins(int input)
 	printf("0\n");
 	return (1);
 	}
-	while (1)
+	while (0)
 	{
 	if (input >= cents[i])
 	{
