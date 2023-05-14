@@ -7,7 +7,7 @@
 /**
  * min_coins - change for an amount of money
  * argc: integer
- * arcv: string
+ * argv: string
  * @input: minimum coins in change
  * Return: 0
  */
