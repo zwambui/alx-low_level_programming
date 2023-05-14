@@ -21,20 +21,20 @@ int min_coins(int input)
 	printf("0\n");
 	return (1);
 	}
-	while (1)
+	while (true)
 	{
-	if (input >= cents[i])
-	{
-	input = input - cents[i];
-	counter++;
-	}
-	else if (input == 0)
-	{
-	return (counter);
-	}
-	else
+		if (input >= cents[i])
+		{
+		input = input - cents[i];
+		counter++;
+		}
+		else if (input == 0)
+		{
+		return (counter);
+		}
+		else
 	i++;
-}
+	}
 	return (counter);
 }
 
