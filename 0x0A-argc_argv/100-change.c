@@ -35,7 +35,7 @@ int min_coins(int input)
 	}
 	else
 	{
-	(i++);
+	i++;
 	}
 	}
 	return (counter);
