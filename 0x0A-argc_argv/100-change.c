@@ -2,7 +2,6 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool.h>
 
 /**
  * min_coins - change for an amount of money
@@ -22,7 +21,7 @@ int min_coins(int input)
 	printf("0\n");
 	return (1);
 	}
-	while (true)
+	while (1)
 	{
 	if (input >= cents[i])
 	{
