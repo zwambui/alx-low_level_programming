@@ -1,65 +1,53 @@
 #include <stdio.h>
-#include <ctype.h>
 #include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
 
 /**
- * min_coins - change for an amount of money
- * argc: integer
- * arcv: string
- * @input: minimum coins in change
- * Return: 0
+ * min_coins - calculate minimum number of coins for change
+ * @input: amount of cents
+ * Return: minimum number of coins
  */
-
 int min_coins(int input)
 {
-	int i = 0, counter = 0;
-	int cents [] = {25, 10, 5, 2, 1};
+	int counter = 0;
+	int cents[] = {25, 10, 5, 2, 1};
+	int num_coins = sizeof(cents) / sizeof(cents[0]);
 
 	if (input < 0)
 	{
 	printf("0\n");
 	return (1);
 	}
-	while (1)
+
+	for (int i = 0; i < num_coins; i++)
 	{
-	if (input >= cents[i])
+	while (input >= cents[i])
 	{
-	input = input - cents[i];
-	counter++;
-	}
-	else if (input == 0)
-	{
-	return (counter);
-	}
-	else
-	{
-	i++;
+		input -= cents[i];
+		counter++;
 	}
 	}
+
 	return (counter);
 }
 
-
 /**
- * main - change for an amount of money
- * @argc: integer
- * @argv: string
- * Return: 0
+ * main - entry point of the program
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0 for success, 1 for error
  */
-
 int main(int argc, char *argv[])
 {
-	int input, output;
-
 	if (argc != 2)
 	{
 	printf("Error\n");
 	return (1);
 	}
-	input = atoi(argv[1]);
-	output = min_coins(input);
-	printf("%d\n", output);
+
+	int cents = atoi(argv[1]);
+	int num_coins = min_coins(cents);
+
+	printf("%d\n", num_coins);
+
 	return (0);
 }
