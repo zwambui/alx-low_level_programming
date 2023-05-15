@@ -3,8 +3,8 @@
 
 /**
  * *argstostr - concatenates all arguements to the program
- * @ac: arguement count
- * @av: pointer to arguements
+ * @ac: argument count
+ * @av: pointer to argument
  * Return: pointer to new space in memory or null
  */
 
@@ -26,10 +26,14 @@ char *argstostr(int ac, char **av)
 	size++;
 
 /**
- * allocate memory for total number of chars and
- * new line for each word
+ * strDup -  allocate memory for total number of chars and
+ * @str: new line for each word
+ * Return: Duplicate string
  */
-	strDup = malloc(sizeof(char) * size);
+
+char *strDup(const char *str);
+{
+strDup = malloc(sizeof(char) * size);
 	if (strDup == NULL)
 		return (NULL);
 	k = 0;
