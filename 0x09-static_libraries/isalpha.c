@@ -10,7 +10,7 @@
  * Return: 0
  */
 
-int _isalpha(int c);
+int _isalpha(int c)
 {
 	return (isalpha(c));
 }
