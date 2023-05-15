@@ -6,11 +6,12 @@
 
 /**
  * _abs - absolute number
- * Return: 0
+ * @n: number
+ *Return: (0)
  */
 
 int _abs(int n)
 {
-	return abs(n);
+	return (abs(n));
 }
 

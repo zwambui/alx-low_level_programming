@@ -6,6 +6,7 @@
 
 /**
  * _puts - puts
+ * @s: string
  * Return: 0
  */
 

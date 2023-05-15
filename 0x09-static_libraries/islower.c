@@ -6,11 +6,12 @@
 
 /**
  * _islower - prints lower case
+ * @c: character
  * Return: 0
  */
 
 int _islower(int c)
 {
-	return c >= 'a' && c <= 'z';
+	return (c >= 'a' && c <= 'z');
 }
 

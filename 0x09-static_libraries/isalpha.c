@@ -6,11 +6,12 @@
 
 /**
  * _isalpha - prints alphabets
+ * @c: character
  * Return: 0
  */
 
 int _isalpha(int c);
 {
-	return isalpha(c);
+	return (isalpha(c));
 }
 

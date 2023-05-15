@@ -6,10 +6,13 @@
 
 /**
  * _memcpy - memcpy
+ * @dest: dest
+ * @src: src
+ * @n: number
  * Return: 0
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	return memcpy(dest, src, n);
+	return (memcpy(dest, src, n));
 }

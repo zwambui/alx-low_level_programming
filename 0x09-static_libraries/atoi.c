@@ -6,12 +6,13 @@
 
 /**
  * _atoi - atoi
+ * @s: string
  * Return: 0
  */
 
 int _atoi(char *s)
 
 {
-	return atoi(s);
+	return (atoi(s));
 }
 

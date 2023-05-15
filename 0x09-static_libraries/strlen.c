@@ -6,11 +6,12 @@
 
 /**
  * _strlen - prints the string length
+ * @s: string
  * Return: 0
  */
 
 int _strlen(char *s)
 {
-	return strlen(s);
+	return (strlen(s));
 }
 

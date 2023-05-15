@@ -6,11 +6,12 @@
 
 /**
  * _isdigit - prints digit
+ * @c: character
  * Return: 0
  */
 
 int _isdigit(int c)
 {
-	return isdigit(c);
+	return (isdigit(c));
 }
 

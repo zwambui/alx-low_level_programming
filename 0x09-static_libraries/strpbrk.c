@@ -6,11 +6,13 @@
 
 /**
  * _strpbrk - strpbrk
+ * @s: string
+ * @accept: accept
  * Return: 0
  */
 
 char *_strpbrk(char *s, char *accept)
 {
-	return strpbrk(s, accept);
+	return (strpbrk(s, accept));
 }
 

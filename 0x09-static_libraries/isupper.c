@@ -6,10 +6,11 @@
 
 /**
  * _isupper - prints uppercase
+ * @c: character
  * Return: 0
  */
 
 int _isupper(int c);
 {
-	return c >= 'A' && c <= 'Z';
+	return (c >= 'A' && c <= 'Z');
 }

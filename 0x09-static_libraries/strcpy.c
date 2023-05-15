@@ -6,11 +6,13 @@
 
 /**
  * _strcpy - copy string
+ * @dest: dest
+ * @src: src
  * Return: 0
  */
 
 char *_strcpy(char *dest, char *src)
 {
-	return strcpy(dest, src);
+	return (strcpy(dest, src));
 }
 
