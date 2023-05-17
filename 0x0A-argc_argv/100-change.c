@@ -56,5 +56,6 @@ int main(int argc, char *argv[])
 	input = atoi(argv[1]);
 	output = min_coins(input);
 	printf("%d\n", output);
+
 	return (0);
 }
