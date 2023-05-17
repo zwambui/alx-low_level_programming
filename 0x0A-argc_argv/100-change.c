@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+#include "main.h"
 
 /**
  * min_coins - change for an amount of money
