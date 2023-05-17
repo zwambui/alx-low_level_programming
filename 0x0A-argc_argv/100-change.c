@@ -19,7 +19,7 @@ int min_coins(int input)
 	if (input < 0)
 	{
 	printf("0\n");
-	return 0;
+	return (0);
 	}
 	while (1)
 	{
@@ -37,7 +37,7 @@ int min_coins(int input)
 	i++;
 	}
 	}
-	return counter;
+	return (counter);
 }
 
 
@@ -60,5 +60,5 @@ int main(int argc, char *argv[])
 	input = atoi(argv[1]);
 	output = min_coins(input);
 	printf("%d\n", output);
-	return 0;
+	return (0);
 }
