@@ -4,57 +4,69 @@
 
 /**
  * min_coins - change for an amount of money
- * argc: integer
- * argv: string
- * @input: minimum coins in change
+ * @i: minimum coins in change
  * Return: 0
  */
 
-int min_coins(int input)
+int min_coins(int i)
 {
-	int i = 0, counter = 0;
-	int cents [] = {25, 10, 5, 2, 1};
+	int count = 0;
 
-	if (input < 0)
+	while (i != 0)
 	{
-	printf("0\n");
-	return (0);
+		if (i % 10 == 9 || i % 10 == 7)
+			i -= 2;
+		else if (i % 25 == 0)
+			i -= 25;
+		else if (i % 10 == 0)
+			i -= 10;
+		else if (i % 5 == 0)
+			i -= 5;
+			else if (i % 2 == 0)
+		{
+			if (i % 10 == 6)
+				i -= 1;
+			else
+				i -= 2;
+		}
+		else
+			i -= 1;
+
+		count++;
 	}
-	while (input > 0)
-	{
-	if (input >= cents[i])
-	{
-	input -= cents[i];
-	counter++;
-	}
-	else
-	{
-	i++;
-	}
-	}
-	return (counter);
+
+	return (count);
 }
 
-
 /**
- * main - change for an amount of money
- * @argc: integer
- * @argv: string
- * Return: 0
+ * main - Takes in exactly one argument for minimum coin count
+ * @argc: Number of command line arguments
+ * @argv: Array name
+ * Return: 0 if exactly 1 argument is passed into this program, 1 otherwise
  */
-
 int main(int argc, char *argv[])
 {
-	int input, output;
+	int i, coin;
+
+	coin = 0;
 
 	if (argc != 2)
 	{
-	printf("Error\n");
-	return (1);
+		printf("Error\n");
+		return (1);
 	}
-	input = atoi(argv[1]);
-	output = min_coins(input);
-	printf("%d\n", output);
+
+	i = atoi(argv[1]);
+
+	if (i < 0)
+		printf("0\n");
+
+	else
+	{
+		coin = min_coins(i);
+
+		printf("%d\n", coin);
+	}
 
 	return (0);
 }
