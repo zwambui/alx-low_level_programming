@@ -10,8 +10,9 @@
  * Return: pointer
  */
 
-void *_calloc(unsigned int nmemb, unsigned int size);
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
+
 	char *ptr;
 	unsigned int count;
 
