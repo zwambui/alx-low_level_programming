@@ -1,17 +1,16 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.hi>
 
 /**
  * malloc_checked - allocates memory using malloc
  * @b: unsigned integer
- * Return: 0
+ * Return: void
  */
 
 void *malloc_checked(unsigned int b)
 {
-	int = *p;
+	int *p;
 
 	p = malloc(b);
 	if (p == NULL)
