@@ -1,7 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
+#include <string.h>
 /**
  * _isnum - checks if string is number
  * @s: string
@@ -57,13 +58,13 @@ int main(int argc, char **argv)
 	int i, j, l1, l2, lful, mul, add, ten, ten2, tl, zer = 0;
 	char *res;
 
-	if (argc != 3 || _isnumber(argv[1]) == 0 || _isnumber(argv[2]) == 0)
+	if (argc != 3 || _isnum(argv[1]) == 0 || _isnum(argv[2]) == 0)
 		printf("Error\n"), exit(98);
 	if (atoi(argv[1]) == 0 || atoi(argv[2]) == 0)
 		printf("0\n"), exit(0);
 	l1 = strlen(argv[1]), l2 = strlen(argv[2]);
 	lful = l1 + l2;
-	res = _callocX(lful);
+	res = _alloc(lful);
 	if (res == 0)
 		printf("Error\n"), exit(98);
 	for (i = l2 - 1; i >= 0; i--)
