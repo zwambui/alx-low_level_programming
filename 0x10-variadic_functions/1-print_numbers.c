@@ -1,11 +1,15 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 
 /**
  * print_numbers - prints numbers
- * @separator:  string to be printed between numbers
+ * @separator: string to be printed between numbers
  * @n: number of integers passed to the function
+ * @va_list: iterating arguments
+ * va_start - Start iterating arguments
+ * va_arg - Retrieve an argument
  *
  * Return: 0
  */
