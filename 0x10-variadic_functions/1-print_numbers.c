@@ -7,7 +7,6 @@
  * print_numbers - prints numbers
  * @separator: string to be printed between numbers
  * @n: number of integers passed to the function
- * @va_list: iterating arguments
  * va_start - Start iterating arguments
  * va_arg - Retrieve an argument
  *
