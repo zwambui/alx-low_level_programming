@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
-
+#include <stdio.h>
 
 /**
  * error_file - checks if files can be opened
