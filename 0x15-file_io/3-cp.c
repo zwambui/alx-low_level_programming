@@ -28,7 +28,7 @@ void error_file(int file_from, int file_to, char *argv[])
 
 /**
  * main - check the code
- * @argc: number of arguments.
+ * @argc: argument count
  * @argv: arguments vector.
  *
  * Return: Always 0.
